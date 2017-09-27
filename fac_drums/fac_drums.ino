@@ -104,6 +104,12 @@ unsigned long curTime = 0;  // current time in microseconds
 unsigned long trigTime = 0; // time at which the sound was triggered
 char trigState = 0;         // indicates if a sound is being played
 
+short digi0Counter = 0;
+short digi1Counter = 0;
+
+short digi0Trigger = 2;
+short digi1Trigger = 4;
+
 //  variables for interrupt handling of the clock input
 volatile char clkState = LOW;
 
@@ -166,6 +172,7 @@ void setup()
   dac.setBuffer(true);        //  Set FALSE for 5V vref.
   dac.setGain(2);             //  "1" for 5V vref. "2" for 2.5V vref.
   dac.setPortWrite(true);     //  Faster analog outs, but loses pin 7.	
+  
 }
 
 
@@ -178,6 +185,20 @@ void loop()
 
   // check to see if the clock as been set
   if (clkState == HIGH) {
+
+    digi0Counter++;
+    digi1Counter++;
+    
+    if(digi0Counter >= digi0Trigger){
+      digi0Counter=0;
+      digitalWrite(digPin0, HIGH);    
+    }
+    
+    if(digi1Counter >= digi1Trigger){
+      digi1Counter=0;
+      digitalWrite(digPin1, HIGH);    
+    }
+
     clkState = LOW;      // clock pulse acknowledged
     trigState = 1;       // a sound has been triggered
     trigTime = micros(); // remember starting time
@@ -193,7 +214,9 @@ void loop()
     p = pgm_read_dword_near(pitch_table + (curVal1 + curVal3));
 
     // Load new sample if necessary and update playback samplerate
-    UpdateSample((curVal0 + curVal2) >> 7, p);
+    //UpdateSample((curVal0 + curVal2) >> 7, p);
+    UpdateSample(map(curVal0 + curVal2, 0, 1023, 0, NUM_SAMPLES), p);
+
   }
 
   // Check if a sound is being played

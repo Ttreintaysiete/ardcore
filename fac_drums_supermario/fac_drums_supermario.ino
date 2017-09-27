@@ -113,8 +113,6 @@ short digi1Trigger = 4;
 //  variables for interrupt handling of the clock input
 volatile char clkState = LOW;
 
-int counter=0;
-
 // This function updates the sample buffer when a new sound is selected
 // and also computes the playback samplerate according to the pitch
 // Inputs: n = new sample number, pitch = pitch factor
@@ -169,7 +167,6 @@ void setup()
   // comment out this call.
   // Note: Interrupt 0 is for pin 2 (clkIn)
   attachInterrupt(0, isr, RISING);
-
 
   dac.setBuffer(true);        //  Set FALSE for 5V vref.
   dac.setGain(2);             //  "1" for 5V vref. "2" for 2.5V vref.
