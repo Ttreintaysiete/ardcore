@@ -43,6 +43,10 @@
 // an executable version of this program so you can make your
 // own sample banks
 
+#include <SPI.h>
+#include <DAC_MCP49xx.h>
+DAC_MCP49xx dac(DAC_MCP49xx::MCP4921, 10);
+
 #include <avr/pgmspace.h>
 
 #include "pitch_table.h"
@@ -57,9 +61,8 @@
 
 //  constants related to the Arduino Nano pin use
 #define clkIn      2    // the digital (clock) input
-#define digPin0    3    // the digital output pin D0
-#define digPin1    4    // the digital output pin D1
-#define pinOffset  5    // the first DAC pin (from 5-12)
+#define digPin0    4    // the digital output pin D0
+#define digPin1    5    // the digital output pin D1
 
 //  constants related to the sample player
 #define NUM_SAMPLES      8      // number of samples stored in flash RAM
@@ -157,12 +160,6 @@ void setup()
   pinMode(digPin1, OUTPUT);
   digitalWrite(digPin1, LOW);
 
-  // set up the 8-bit DAC output pins
-  for (int i=0; i<8; i++) {
-    pinMode(pinOffset+i, OUTPUT);
-    digitalWrite(pinOffset+i, LOW);
-  }
-
   // Make sure some sample is loaded
   UpdateSample(0, 1);
   dacOutputFast(128);
@@ -172,6 +169,12 @@ void setup()
   // comment out this call.
   // Note: Interrupt 0 is for pin 2 (clkIn)
   attachInterrupt(0, isr, RISING);
+
+
+  dac.setBuffer(true);        //  Set FALSE for 5V vref.
+  dac.setGain(2);             //  "1" for 5V vref. "2" for 2.5V vref.
+  dac.setPortWrite(true);     //  Faster analog outs, but loses pin 7.  
+
 }
 
 
@@ -271,13 +274,7 @@ void isr()
 //  ------------------------------------------
 void dacOutput(long v)
 {
-  // feed this routine a value between 0 and 255 and teh DAC
-  // output will send it out.
-  int tmpVal = v;
-  for (int i=0; i<8; i++) {
-    digitalWrite(pinOffset + i, tmpVal & 1);
-    tmpVal = tmpVal >> 1;
-  }
+  dac.outputA(v);
 }
 
 
@@ -285,15 +282,7 @@ void dacOutput(long v)
 // and it's supposed to be faster than dacOutput
 void dacOutputFast(long v)
 {
- int tmpVal = v;
- bitWrite(PORTD, 5, tmpVal & 1);
- bitWrite(PORTD, 6, (tmpVal & 2) > 0);
- bitWrite(PORTD, 7, (tmpVal & 4) > 0);
- bitWrite(PORTB, 0, (tmpVal & 8) > 0);
- bitWrite(PORTB, 1, (tmpVal & 16) > 0);
- bitWrite(PORTB, 2, (tmpVal & 32) > 0);
- bitWrite(PORTB, 3, (tmpVal & 64) > 0);
- bitWrite(PORTB, 4, (tmpVal & 128) > 0);
+  dac.outputA(v);
 }
 
 

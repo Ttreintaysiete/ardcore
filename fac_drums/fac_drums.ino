@@ -1,7 +1,3 @@
-#include <SPI.h>
-#include <DAC_MCP49xx.h>
-DAC_MCP49xx dac(DAC_MCP49xx::MCP4921, 10);
-
 //  ============================================================
 //
 //  Program: ArdCore Drum Sample Player
@@ -47,6 +43,10 @@ DAC_MCP49xx dac(DAC_MCP49xx::MCP4921, 10);
 // an executable version of this program so you can make your
 // own sample banks
 
+#include <SPI.h>
+#include <DAC_MCP49xx.h>
+DAC_MCP49xx dac(DAC_MCP49xx::MCP4921, 10);
+
 #include <avr/pgmspace.h>
 
 #include "pitch_table.h"
@@ -61,9 +61,8 @@ DAC_MCP49xx dac(DAC_MCP49xx::MCP4921, 10);
 
 //  constants related to the Arduino Nano pin use
 #define clkIn      2    // the digital (clock) input
-#define digPin0    3    // the digital output pin D0
-#define digPin1    4    // the digital output pin D1
-#define pinOffset  5    // the first DAC pin (from 5-12)
+#define digPin0    4    // the digital output pin D0
+#define digPin1    5    // the digital output pin D1
 
 //  constants related to the sample player
 #define NUM_SAMPLES      8      // number of samples stored in flash RAM
@@ -153,12 +152,6 @@ void setup()
   digitalWrite(digPin0, LOW);
   pinMode(digPin1, OUTPUT);
   digitalWrite(digPin1, LOW);
-
-  // set up the 8-bit DAC output pins
-  for (int i=0; i<8; i++) {
-    pinMode(pinOffset+i, OUTPUT);
-    digitalWrite(pinOffset+i, LOW);
-  }
 
   // Make sure some sample is loaded
   UpdateSample(0, 1);
