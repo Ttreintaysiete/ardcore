@@ -256,8 +256,7 @@ void isr()
 //  ------------------------------------------
 void dacOutput(long v)
 {
-//short out = (v * 16);   //  Scale 8 bits to 12 bits.
-dac.outputA(v);       //  Second output: "dac.outputB()"
+  dac.outputA(v);
 }
 
 
@@ -265,8 +264,7 @@ dac.outputA(v);       //  Second output: "dac.outputB()"
 // and it's supposed to be faster than dacOutput
 void dacOutputFast(long v)
 {
-//short out = (v * 16);   //  Scale 8 bits to 12 bits.
-dac.outputA(v);       //  Second output: "dac.outputB()"
+  dac.outputA(v);
 }
 
 
