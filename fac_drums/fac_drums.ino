@@ -63,6 +63,8 @@ DAC_MCP49xx dac(DAC_MCP49xx::MCP4921, 10);
 #define clkIn      2    // the digital (clock) input
 #define digPin0    4    // the digital output pin D0
 #define digPin1    5    // the digital output pin D1
+#define digPin2    6    // the digital output pin D2
+#define digPin3    7    // the digital output pin D3
 
 //  constants related to the sample player
 #define NUM_SAMPLES      8      // number of samples stored in flash RAM
@@ -106,6 +108,8 @@ char trigState = 0;         // indicates if a sound is being played
 
 short digi0Counter = 0;
 short digi1Counter = 0;
+short digi2Counter = 0;
+short digi3Counter = 0;
 
 short digi0Trigger = 2;
 short digi1Trigger = 4;
@@ -158,6 +162,10 @@ void setup()
   digitalWrite(digPin0, LOW);
   pinMode(digPin1, OUTPUT);
   digitalWrite(digPin1, LOW);
+  pinMode(digPin2, OUTPUT);
+  digitalWrite(digPin3, LOW);
+  pinMode(digPin3, OUTPUT);
+  digitalWrite(digPin3, LOW);
 
   // Make sure some sample is loaded
   UpdateSample(0, 1);
@@ -188,6 +196,8 @@ void loop()
 
     digi0Counter++;
     digi1Counter++;
+    digi2Counter++;
+    digi3Counter++;
     
     if(digi0Counter >= digi0Trigger){
       digi0Counter=0;
@@ -198,6 +208,16 @@ void loop()
       digi1Counter=0;
       digitalWrite(digPin1, HIGH);    
     }
+    
+    if(digi2Counter >= map(analogRead(2),0,1014,1,12)){
+      digi2Counter=0;
+      digitalWrite(digPin2, HIGH);    
+    }
+
+    if(digi3Counter >= map(analogRead(3),0,1014,1,12)){
+      digi3Counter=0;
+      digitalWrite(digPin3, HIGH);    
+    }    
 
     clkState = LOW;      // clock pulse acknowledged
     trigState = 1;       // a sound has been triggered
@@ -207,15 +227,13 @@ void loop()
     // This is only done at sample-start to save resources
     curVal0 = deJitter(analogRead(0), curVal0);
     curVal1 = deJitter(analogRead(1), curVal1);
-    curVal2 = deJitter(analogRead(2), curVal2);
-    curVal3 = deJitter(analogRead(3), curVal3);
 
     // Read pitch factor from lookup table
-    p = pgm_read_dword_near(pitch_table + (curVal1 + curVal3));
+    p = pgm_read_dword_near(pitch_table + (curVal1));
 
     // Load new sample if necessary and update playback samplerate
     //UpdateSample((curVal0 + curVal2) >> 7, p);
-    UpdateSample(map(curVal0 + curVal2, 0, 1023, 0, NUM_SAMPLES), p);
+    UpdateSample(map(curVal0, 0, 1023, 0, NUM_SAMPLES), p);
 
   }
 
@@ -247,6 +265,8 @@ void loop()
   
   digitalWrite(digPin0, LOW);
   digitalWrite(digPin1, LOW);
+  digitalWrite(digPin2, LOW);
+  digitalWrite(digPin3, LOW);
   
 }
 
