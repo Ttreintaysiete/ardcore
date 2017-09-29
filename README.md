@@ -14,3 +14,7 @@ Later on SnazzyFX published an eurorack format of the module and (as Dan a.k.a. 
 There are plenty of threads in muffwiggler talking about different DIY versions, back in 2013 we made our own version for bananas.
 
 ![snazzyfx ardcore]( images/ardcore-ttreintaysiete.jpg)
+
+The Ardcore is not so well known module but its a power house due its flexibility, it has several sketches that are very usefull and fun to play, but more important the Ardcore is a module that tries to embed the Arduino philosophy into the modular synthesizer community which is to allow musicians, artists and engineers to easly create microcontroller based modules.
+
+Due its digital nature, the ardcore is very good for creating CV sources that are otherwise more complex to create with hardware (like a drunken walk), but it also can create audio with the DAC.
