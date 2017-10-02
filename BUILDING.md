@@ -32,6 +32,8 @@ n/a | 4 | LED3MM | LED1, LED2, LED3, LED4  LED
 
 1. Solder all the power components as show in the picture:
 
+   * Atmega328P-AU
+   * SMD Resonator - this is the equivalent of a Crystal Oscillator plus the 2 x 22pf caps widely used in arduino boards but in a single package.
    * IC2 - 5V regulator 
    * D1, D2 - 1n5819
    * C5, C6 - 10u eletrolitic caps
@@ -109,6 +111,6 @@ avrdude done.  Thank you.
 
 5. If everything goes OK with the bootloader now you can upload sketches, you can try to upload the [__test__](https://github.com/Ttreintaysiete/ardcore/tree/master/software/ardcore-pot-led-test) sketch we have prepared, this sketch lets you __TEST__ the LEDS, AnalogInputs and Digital Outputs, its a sort of "cheap and dirty" clock divider just mean for testing the module. It has an internal clock, it doesn't accept external clock or uses the DAC to output anything.
 
-6. At this point you should solder the rest of the components and check that it works with the __test sketch__. Remember to NO solder the jacks and pots without putting the panel.
+6. At this point you should solder the rest of the components and check that it works with the __test sketch__. Remember to solder tha jacks and the pots on the last place, use the panel to correctly align all the components and then solder them.
 
 7. When you finish soldering all the components you should test your module using an sketch that uses the DAC, like th [__FAC drums__](https://github.com/Ttreintaysiete/ardcore/tree/master/software/fac_drums).
