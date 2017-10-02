@@ -43,6 +43,8 @@ Some of the decissions taken during the pcb design have downsides.
 
 * Another problem from upgrading the DAC is that the original sketches that used it, need a small tweak on the code in order to work properlly. This is based on the Euroardcore but with the mcp4921
 
+  * This version of the Ardcore is __non-banana friendly__ :( ... we are very sorry for this because we have many modules in bananas and love them, but it was a design decision to make it work with the disconnections on the minijacks. This is by far (in our opinion) the biggest downside.
+
   * you need to add to the beggining of any sketch using the DAC,
     ```
     #include <SPI.h>
