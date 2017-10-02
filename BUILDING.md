@@ -112,4 +112,3 @@ avrdude done.  Thank you.
 6. At this point you should solder the rest of the components and check that it works with the __test sketch__. Remember to NO solder the jacks and pots without putting the panel.
 
 7. When you finish soldering all the components you should test your module using an sketch that uses the DAC, like th [__FAC drums__](https://github.com/Ttreintaysiete/ardcore/tree/master/fac_drums).
-
