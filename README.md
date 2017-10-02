@@ -64,3 +64,9 @@ Some of the decissions taken during the pcb design have downsides.
     ```
 
 * No USB, need a programer.. original ardcores had either an arduino nano or a ftdi IC with USB on the board, so you can directly upload your sketches. With this version you need an external programmer that uses ISP, we recommend the official [AVRISP mkii](http://www.atmel.com/tools/avrispmkii.aspx).
+
+# License:
+
+This software and hardware is licensed under the Creative Commons __Attribution-NonCommercial__ license. This license allows you to tweak and build upon the code for non-commercial purposes, without the requirement to license derivative works on the same terms. If you wish to use this (or derived) work for commercial work or usage of the PCBS, please contact 20 Objects LLC its website (www.20objects.com).
+
+For more information on the Creative Commons CC BY-NC license, visit http://creativecommons.org/licenses/

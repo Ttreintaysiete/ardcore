@@ -107,4 +107,9 @@ avrdude done.  Thank you.
 
 4. Since its an Arduino based project, and it the atmega328p-au comes completely blank we have to burn the bootloader, you need to chose the board "Arduno NANO w/Atmega328" on the board menu, and change your programmer to "AVRIS-mkii" on the programmer menu. To burn the bootloader  "Tools -> Burn bootloader".
 
-5. If everything goes OK with the bootloader now you can upload sketches, you can try to upload the __test__ sketch we have prepared
+5. If everything goes OK with the bootloader now you can upload sketches, you can try to upload the [__test__](https://github.com/Ttreintaysiete/ardcore/tree/master/ardcore-pot-led-test) sketch we have prepared, this sketch lets you lets the LEDS, AnalogInputs and Digital Outputs, its a sort of "cheap and dirty" clock divider just mean for testing the module. It has an internal clock, it doesn't accept external clock or uses the DAC to output anything.
+
+6. At this point you should solder the rest of the components and check that it works with the __test sketch__. Remember to NO solder the jacks and pots without putting the panel.
+
+7. When you finish soldering all the components you should test your module using an sketch that uses the DAC, like th [__FAC drums__](https://github.com/Ttreintaysiete/ardcore/tree/master/fac_drums).
+
