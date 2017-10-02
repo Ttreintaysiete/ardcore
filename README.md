@@ -67,7 +67,7 @@ Some of the decissions taken during the pcb design have downsides.
     }
     ```
 
-* No USB, need a programer.. original ardcores had either an arduino nano or a ftdi IC with USB on the board, so you can directly upload your sketches. With this version you need an external programmer that uses ISP, we recommend the official [AVRISP mkii](http://www.atmel.com/tools/avrispmkii.aspx).
+* No USB, need a programer.. the original Ardcore had either an arduino nano or a ftdi IC with USB on the board, so you can directly upload your sketches. With this version you need an external programmer that uses ISP, we recommend the official [AVRISP mkii](http://www.atmel.com/tools/avrispmkii.aspx).
 
 # License:
 
