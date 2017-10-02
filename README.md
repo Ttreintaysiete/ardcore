@@ -39,11 +39,13 @@ So we decided to make a skiff friendly, DIY Ardcore with several improvements:
 
 Some of the decissions taken during the pcb design have downsides.
 
+![no more fruit-of-love](images/non-banana.png)
+
+* This version of the Ardcore is __non-banana friendly__ :( ... we are very sorry for this because we have many modules in bananas and love them, but it was a design decision to make it work with the disconnections on the minijacks. This is by far (in our opinion) the biggest downside.
+
 * When upgrading the DAC from parallel to SPI we lose all the "bit" traces from the parallel connections, so its not possible to easly create an expander for this version of the module.
 
 * Another problem from upgrading the DAC is that the original sketches that used it, need a small tweak on the code in order to work properlly. This is based on the Euroardcore but with the mcp4921
-
-  * This version of the Ardcore is __non-banana friendly__ :( ... we are very sorry for this because we have many modules in bananas and love them, but it was a design decision to make it work with the disconnections on the minijacks. This is by far (in our opinion) the biggest downside.
 
   * you need to add to the beggining of any sketch using the DAC,
     ```
