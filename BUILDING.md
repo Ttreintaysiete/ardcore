@@ -1,32 +1,32 @@
 # Bill of Materials
 
-Suggested Part | Qty | Value | Package | Parts | Description
----------------| --- | ----- | ------- | ----- | ------------
+Suggested Part | Qty | Value | Parts | Description
+---------------| --- | ----- | ----- | ------------
 [9mm Alpha pots](https://www.thonk.co.uk/shop/alpha-9mm-pots-dshaft/) | 4 | 10k | ALPS_POT_VERTICAL       
 [thonkicons](https://www.thonk.co.uk/shop/3-5mm-jacks/) | 11 | WQP-PJ301M-12_JACK | WQP-PJ301M-12_JACK      
-n/a | 1 | Header 3x2 | 2X3 | AVR_ISP | Header 3x2
-n/a | 1 | Header 5x2  AVR_ICSP | JP1 | Header 5x2
+n/a | 1 | Header 3x2 | AVR_ISP | Header 3x2
+n/a | 1 | Header 5x2  | JP1 | Header 5x2
 n/a | 4 | LED3MM | LED1, LED2, LED3, LED4  LED
-81-GRM39C101J50 | 6 | 100n 1 C0605 | C1, C2, C3, C7, C27, C28 | CAPACITOR, European symbol
-81-GRM1885C1H101GA1J | 2 | 100p | C0603 | C21, C22 | CAPACITOR, American symbol
-667-EEE-FK1C470P | 2 | 47u | PANASONIC_D | C25, C30 | POLARIZED CAPACITOR, American symbol
-81-GRM39C470J50 | 1 | 47p | C0603 | C29 | CAPACITOR, American symbol
-667-ECE-A1VKS100 | 3 | 10u | E2,5-5 | C4, C5, C6 | POLARIZED CAPACITOR, European symbol
-621-1N5819HW-F | 2 | 1N5819HW | SOD123 | D1, D2 | DIODE
-78-1N4148W-E3-08 | 8 | 1n4148 | SOD80_DO213AA_MINIMELF | D3, D4, D5, D6, D7, D8, D9, D10 | 1N4148 General Purpose Rectifie
-595-TL072CD | 1 | TL072 | SO08 | IC10 | OP AMP
-511-L7805CDT-TR 1 | 7805DT | TO252 | IC2 | Positive VOLTAGE REGULATOR
-579-MCP4921-E/SN | 1 | MCP4921 | SO08 | IC4 
-595-SN74AHCT1G125DBV | 4 | 74AHCT1G125DBV | SOT23-5 | IC5, IC7, IC8, IC11 | Single Bus Buffer Gate with 3-State Output
-556-ATMEGA328P-AU | 1 | ATMEGA328P-AU | TQFP32-08 | IC6 
+81-GRM39C101J50 | 6 | 100n | C1, C2, C3, C7, C27, C28 | CAPACITOR, European symbol
+81-GRM1885C1H101GA1J | 2 | 100p | C21, C22 | CAPACITOR, American symbol
+667-EEE-FK1C470P | 2 | 47u | C25, C30 | POLARIZED CAPACITOR, American symbol
+81-GRM39C470J50 | 1 | 47p | C29 | CAPACITOR, American symbol
+667-ECE-A1VKS100 | 3 | 10u | C4, C5, C6 | POLARIZED CAPACITOR, European symbol
+621-1N5819HW-F | 2 | 1N5819HW | D1, D2 | DIODE
+78-1N4148W-E3-08 | 8 | 1n4148 | D3, D4, D5, D6, D7, D8, D9, D10 | 1N4148 General Purpose Rectifie
+595-TL072CD | 1 | TL072 | IC10 | OP AMP
+511-L7805CDT-TR 1 | 7805DT | IC2 | Positive VOLTAGE REGULATOR
+579-MCP4921-E/SN | 1 | MCP4921 | IC4 
+595-SN74AHCT1G125DBV | 4 | 74AHCT1G125DBV | IC5, IC7, IC8, IC11 | Single Bus Buffer Gate with 3-State Output
+556-ATMEGA328P-AU | 1 | ATMEGA328P-AU | IC6 
 863-MMBT3904LT1G | 2 | SOT23-BEC | Q1, Q5 | NPN Transistror
-652-CR0603FX-2200ELF | 4 | __100 to 220__ | R0603 | R1, R2, R5, R33 | Resistor for LEDS, so depends on your leds color.
-652-CR0603FX-1002ELF | 3 | 10k | R0603 | R3, R6, R7 | RESISTOR, American symbol
-652-CR0603-FX-1003GLF | 3 | 100k | R0603 | R4, R13, R56 | RESISTOR, American symbol
-652-CR0603FX-3902ELF | 2 | 39k | R0603 | R45, R46 | RESISTOR, American symbol
-652-CR0603FX-2492ELF | 1 | 24.9k | R0603 | R50 | RESISTOR, American symbol
-652-CR0603-FX1001HLF | 9 | 1K | R0603 | RC1, RC2, RC3, RC4, R32, R34, R38, R43, R55 | RESISTOR, European symbol
-81-CSTCE16M0V53-R0 | 1 | RESONATORSMD | RESONATOR-SMD | Y1 | Resonator
+652-CR0603FX-2200ELF | 4 | __100 to 220__ | R1, R2, R5, R33 | Resistor for LEDS, so depends on your leds color.
+652-CR0603FX-1002ELF | 3 | 10k | R3, R6, R7 | RESISTOR, American symbol
+652-CR0603-FX-1003GLF | 3 | 100k | R4, R13, R56 | RESISTOR, American symbol
+652-CR0603FX-3902ELF | 2 | 39k | R45, R46 | RESISTOR, American symbol
+652-CR0603FX-2492ELF | 1 | 24.9k | R50 | RESISTOR, American symbol
+652-CR0603-FX1001HLF | 9 | 1K | RC1, RC2, RC3, RC4, R32, R34, R38, R43, R55 | RESISTOR, European symbol
+81-CSTCE16M0V53-R0 | 1 | RESONATOR | Y1 | Resonator
 
 # Building your Ardcore
 
