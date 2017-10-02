@@ -44,7 +44,7 @@ n/a | 4 | LED3MM | LED1, LED2, LED3, LED4  LED
 
 2. test the power on the board, plug the eurorack power supply cable and check that nothing gets too hot, if you have a current measure tool its also a good practice to measure the module current consumption which should be a few milliamps. If you detect your module is compsuming more than 200mha then something is wrong. This way of testing your module is much better than directly plugin it into your euorack module so you avoid any damages to the rest of your modules.
 
-3. Now its time to change the fuses of the atmega328p-au, this is important because by default the MC uses its internal oscillator (which is not accurate), so to let it know if should use an external oscillator you should use the avrdude tool and this command and your AVRPISP-mkii
+3. Now its time to change the __fuses__ of the Atmega328P-AU, this is important because by default the MC uses its internal oscillator (which is not very accurate, but its free), to use an external oscillator you should use the avrdude tool and this command and your AVRPISP-mkii programer:
 
 ```
 [luix@boxita ardcore]$ sudo avrdude -c avrispmkII -p m328p -U lfuse:w:0xFF:m -U hfuse:w:0xDA:m -U efuse:w:0x05:m
