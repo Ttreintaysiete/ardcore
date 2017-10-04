@@ -44,9 +44,9 @@ n/a | 4 | LED3MM | LED1, LED2, LED3, LED4  LED
 
    ![power supply components]( images/ardcore-building-0.jpg)
 
-2. test the power on the board, plug the eurorack power supply cable and check that nothing gets too hot, if you have a current measure tool its also a good practice to measure the module current consumption which should be a few milliamps. If you detect your module is compsuming more than 200mha then something is wrong. This way of testing your module is much better than directly plugin it into your euorack module so you avoid any damages to the rest of your modules.
+2. test the power on the board, plug the eurorack power supply cable and check that nothing gets too hot, if you have a current measure tool its also a good practice to measure the module current consumption which should be a few milliamps. If you detect your module is compsuming more than 200mha then something is wrong. This way of testing your module is much better than directly plugin it into your euorack system so you avoid any damages to the rest of your modules.
 
-3. Now its time to change the __fuses__ of the Atmega328P-AU, this is important because by default the MC uses its internal oscillator (which is not very accurate, but its free), to use an external oscillator you should use the avrdude tool and this command and your AVRPISP-mkii programer:
+3. Now its time to change the __fuses__ of the Atmega328P-AU, this is important because by default the microcontrollers uses its internal oscillator (which is not very accurate, but its free), to use an external oscillator you should use the avrdude tool and this command and your AVRPISP-mkii programer:
 
 ```
 [luix@boxita ardcore]$ sudo avrdude -c avrispmkII -p m328p -U lfuse:w:0xFF:m -U hfuse:w:0xDA:m -U efuse:w:0x05:m
@@ -109,8 +109,8 @@ avrdude done.  Thank you.
 
 4. Since its an Arduino based project, and it the atmega328p-au comes completely blank we have to burn the bootloader, you need to chose the board "Arduno NANO w/Atmega328" on the board menu, and change your programmer to "AVRIS-mkii" on the programmer menu. To burn the bootloader  "Tools -> Burn bootloader".
 
-5. If everything goes OK with the bootloader now you can upload sketches, you can try to upload the [__test__](https://github.com/Ttreintaysiete/ardcore/tree/master/software/ardcore-pot-led-test) sketch we have prepared, this sketch lets you __TEST__ the LEDS, AnalogInputs and Digital Outputs, its a sort of "cheap and dirty" clock divider just mean for testing the module. It has an internal clock, it doesn't accept external clock or uses the DAC to output anything.
+5. If everything goes OK with the bootloader now you can upload sketches, you can try to upload the [__test__](https://github.com/Ttreintaysiete/ardcore/tree/master/software/ardcore-pot-led-test) sketch we have prepared, this sketch lets you __TEST__ the LEDS, AnalogInputs and Digital Outputs, its a sort of "cheap and dirty" clock divider just mean for testing the module. It has an internal clock, it doesn't accept external clock nor uses the DAC to output anything.
 
-6. At this point you should solder the rest of the components and check that it works with the __test sketch__. Remember to solder tha jacks and the pots on the last place, use the panel to correctly align all the components and then solder them.
+6. At this point you should solder the rest of the components and check that it works with the __test sketch__. Remember to solder the jacks and the pots the last, use the panel to correctly align all the components and then solder them.
 
-7. When you finish soldering all the components you should test your module using an sketch that uses the DAC, like th [__FAC drums__](https://github.com/Ttreintaysiete/ardcore/tree/master/software/fac_drums).
+7. When you finish soldering all the components you should test your module using an sketch that uses the CLOCKIN and DAC, like th [__FAC drums__](https://github.com/Ttreintaysiete/ardcore/tree/master/software/fac_drums).
