@@ -1,5 +1,7 @@
 # Bill of Materials
 
+This is the mouser [BOM](https://www.mouser.es/ProjectManager/ProjectDetail.aspx?AccessID=9c269e6775), but here is the detail anyway because you are so lazy to copy paste it into a mouser project/cart :P
+
 Suggested Part | Qty | Value | Parts | Description
 ---------------| --- | ----- | ----- | ------------
 [9mm Alpha pots](https://www.thonk.co.uk/shop/alpha-9mm-pots-dshaft/) | 4 | 10k | ALPS_POT_VERTICAL       
