@@ -9,7 +9,7 @@ Suggested Part | Qty | Value | Parts | Description
 n/a | 1 | Header 3x2 | AVR_ISP | Header 3x2
 n/a | 1 | Header 5x2  | JP1 | Header 5x2
 n/a | 4 | LED3MM | LED1, LED2, LED3, LED4  LED
-81-GRM39C101J50 | 6 | 100n | C1, C2, C3, C7, C27, C28 | CAPACITOR, European symbol
+81-GRM188R71H104JA3D | 6 | 100n | C1, C2, C3, C7, C27, C28 | CAPACITOR, European symbol
 81-GRM1885C1H101GA1J | 2 | 100p | C21, C22 | CAPACITOR, American symbol
 667-EEE-FK1C470P | 2 | 47u | C25, C30 | POLARIZED CAPACITOR, American symbol
 81-GRM39C470J50 | 1 | 47p | C29 | CAPACITOR, American symbol
