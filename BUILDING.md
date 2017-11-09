@@ -38,7 +38,8 @@ n/a | 4 | LED3MM | LED1, LED2, LED3, LED4  LED
    * SMD Resonator - this is the equivalent of a Crystal Oscillator plus the 2 x 22pf caps widely used in arduino boards but in a single package.
    * IC2 - 5V regulator 
    * D1, D2 - 1n5819
-   * C5, C6 - 10u eletrolitic caps
+   * C4 (on the front side), C5, C6,  - 10u eletrolitic caps
+   * C25, C30 - 47u electrolic caps
    * R3 a 10k resistor for the MC reset
    * C1, C2, C3, C7 - 100n ceramic caps
    * ISP pin header for programming
