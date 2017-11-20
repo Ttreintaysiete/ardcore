@@ -2101,7 +2101,7 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="NAME" x="19.665" y="8.165" size="1.016" layer="26" rot="MR180"/>
 <attribute name="VALUE" x="20.835" y="6.855" size="1.016" layer="28" rot="MR180"/>
 </element>
-<element name="R50" library="rcl" package="R0603" value="24.9k" x="27.6" y="1.5" smashed="yes" rot="MR0">
+<element name="R50" library="rcl" package="R0603" value="47k" x="27.6" y="1.5" smashed="yes" rot="MR0">
 <attribute name="NAME" x="28.755" y="2.165" size="1.016" layer="26" rot="MR0"/>
 <attribute name="VALUE" x="23.505" y="1.115" size="0.8128" layer="28" rot="MR180"/>
 </element>

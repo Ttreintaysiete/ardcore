@@ -56,7 +56,7 @@ Some of the decissions taken during the pcb design have downsides.
   * also you need to add the following code at the end of the __setup()__ so the DAC is properlly initialized:
     ```
     dac.setBuffer(true);        //  Set FALSE for 5V vref.
-    dac.setGain(2);             //  "1" for 5V vref. "2" for 2.5V vref.
+    dac.setGain(1);             //  "1" for 5V vref. "2" for 2.5V vref.
     dac.setPortWrite(true); 
     ```
   * and finally replace the __dacOutput()__ and __dacOutputfast()__ to be something like:
