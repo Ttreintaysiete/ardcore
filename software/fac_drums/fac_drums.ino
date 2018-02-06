@@ -292,7 +292,7 @@ void isr()
 //  ------------------------------------------
 void dacOutput(long v)
 {
-  dac.outputA(v);
+  dac.outputA(v*4);
 }
 
 
@@ -300,7 +300,7 @@ void dacOutput(long v)
 // and it's supposed to be faster than dacOutput
 void dacOutputFast(long v)
 {
-  dac.outputA(v);
+  dac.outputA(v*4);
 }
 
 
