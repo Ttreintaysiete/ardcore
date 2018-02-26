@@ -24,14 +24,13 @@ You need to do a small tweak on the code in order to work properlly, this is bec
     }
     ```
 
-
 # Compiling the sketches of this repo
 
 I'm using __arduino 1.0.6__ to compile all fac_drum sketches, it may be possible to use newer arduino versions on the rest of the sketches.
 
 In the __libraries__ folder you can find the library I'm currently using to compile all the sketches with the MCP (dac).
 
-![lib configuration ardcore]( images/libraries-folder.png)
+![lib configuration ardcore]( /images/libraries-folder.png)
 
 In my case I'm using Arduino with sudo command (to let read/write USB ports for the programmer), so my __sketbook__ is located at __/root/sketchbook__ and here is were I coped the DAC_MCP49xx library.
 
