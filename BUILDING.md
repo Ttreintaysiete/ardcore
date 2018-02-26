@@ -112,35 +112,8 @@ avrdude done.  Thank you.
 
 4. Since its an Arduino based project, and it the atmega328p-au comes completely blank we have to burn the bootloader, you need to chose the board "Arduno NANO w/Atmega328" on the board menu, and change your programmer to "AVRIS-mkii" on the programmer menu. To burn the bootloader  "Tools -> Burn bootloader".
 
-5. If everything goes OK with the bootloader now you can upload sketches, you can try to upload the [__test__](https://github.com/Ttreintaysiete/ardcore/tree/master/software/ardcore-pot-led-test) sketch we have prepared, this sketch lets you __TEST__ the LEDS, AnalogInputs and Digital Outputs, its a sort of "cheap and dirty" clock divider just mean for testing the module. It has an internal clock, it doesn't accept external clock nor uses the DAC to output anything.
+5. If everything goes OK with the bootloader now you can upload sketches, you can try to upload the [__test__](https://github.com/Ttreintaysiete/ardcore/tree/master/software/sketches/ardcore-pot-led-test) sketch we have prepared, this sketch lets you __TEST__ the LEDS, AnalogInputs and Digital Outputs, its a sort of "cheap and dirty" clock divider just mean for testing the module. It has an internal clock, it doesn't accept external clock nor uses the DAC to output anything.
 
 6. At this point you should solder the rest of the components and check that it works with the __test sketch__. Remember to solder the jacks and the pots the last, use the panel to correctly align all the components and then solder them.
 
-7. When you finish soldering all the components you should test your module using an sketch that uses the CLOCKIN and DAC, like th [__FAC drums__](https://github.com/Ttreintaysiete/ardcore/tree/master/software/fac_drums).
-
-
-# MCP Library
-
-In order to compile sketches using the MCP49 DAC, you have to download the library [here](https://github.com/downloads/exscape/electronics/Arduino_DAC_MCP49x1_v1.0.zip) and install it in your Arduino library. Also note that some instructions used in the fac_drums were deprecated on the newest Arduino IDE, so you need to compile and upload them on the older.
-
-You need to do a small tweak on the code in order to work properlly, this is because this new DAC uses SPI. This is based on the Euroardcore but with the mcp4921 has [been fully tested](https://www.youtube.com/watch?v=P1rAHDsiEtc):
-
-  * you need to add to the beggining of any sketch using the DAC,
-    ```
-    #include <SPI.h>
-    #include <DAC_MCP49xx.h>
-    DAC_MCP49xx dac(DAC_MCP49xx::MCP4921, 10);
-    ```
-  * also you need to add the following code at the end of the __setup()__ so the DAC is properlly initialized:
-    ```
-    dac.setBuffer(true);        //  Set FALSE for 5V vref.
-    dac.setGain(1);             //  "1" for 5V vref. "2" for 2.5V vref.
-    dac.setPortWrite(true); 
-    ```
-  * and finally replace the __dacOutput()__ and __dacOutputfast()__ to be something like:
-    ```
-     void dacOutput(long v)
-    {
-      dac.outputA(v);
-    }
-    ```
+7. When you finish soldering all the components you should test your module using an sketch that uses the CLOCKIN and DAC, like th [__FAC drums__](https://github.com/Ttreintaysiete/ardcore/tree/master/software/sketches/fac_drums).
