@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.3.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -22766,7 +22766,7 @@ Source: http://focus.ti.com/lit/ds/slcs146e/slcs146e.pdf</description>
 <part name="RC3" library="rcl" deviceset="R-EU_" device="R0603" value="1K"/>
 <part name="D7" library="hhn_diodes_smd" deviceset="LL4148" device=""/>
 <part name="D8" library="hhn_diodes_smd" deviceset="LL4148" device=""/>
-<part name="U2" library="Texas Instruments_By_element14_Batch_1" deviceset="DAC8552IDGKT" device=""/>
+<part name="U2" library="Texas Instruments_By_element14_Batch_1" deviceset="DAC8552IDGKT" device="" value="DAC8552"/>
 <part name="IC1" library="linear" deviceset="TL072" device="D" value="OPA2171"/>
 <part name="R12" library="rcl" deviceset="R-US_" device="R0603" value="39k"/>
 <part name="R14" library="rcl" deviceset="R-US_" device="R0603" value="39k"/>
@@ -22796,12 +22796,12 @@ Source: http://focus.ti.com/lit/ds/slcs146e/slcs146e.pdf</description>
 <part name="GND4" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND14" library="SparkFun" deviceset="GND" device=""/>
 <part name="L1" library="wuerth-elektronik" deviceset="WE-CBF" device="_0603"/>
-<part name="IC9" library="texas" deviceset="LM4041" device="DBZ" technology="B12" value="LM4040B10"/>
+<part name="IC9" library="texas" deviceset="LM4041" device="DBZ" technology="B12" value="LM4040"/>
 <part name="R25" library="rcl" deviceset="R-US_" device="R0603" value="3.3k"/>
 <part name="C22" library="rcl" deviceset="C-US" device="C0603" value="470n"/>
 <part name="GND69" library="SparkFun" deviceset="GND" device=""/>
 <part name="SUPPLY3" library="supply2" deviceset="VEE" device=""/>
-<part name="IC12" library="texas" deviceset="LM4041" device="DBZ" technology="B12" value="LM4040B25"/>
+<part name="IC12" library="texas" deviceset="LM4041" device="DBZ" technology="B12" value="LM4040"/>
 <part name="R9" library="rcl" deviceset="R-US_" device="R0603" value="XXX"/>
 <part name="GND24" library="SparkFun" deviceset="GND" device=""/>
 <part name="C11" library="rcl" deviceset="C-US" device="C0603" value="470n"/>
