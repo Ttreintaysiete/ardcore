@@ -203,176 +203,6 @@ DIN A3, landscape with location and doc. field</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="pot-alps">
-<packages>
-<package name="CABLE_POT_6MM">
-<wire x1="-3.81" y1="1.27" x2="3.81" y2="1.27" width="0.2032" layer="21"/>
-<wire x1="-3.81" y1="1.27" x2="-3.81" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="3.81" y1="-1.27" x2="3.81" y2="1.27" width="0.2032" layer="21"/>
-<wire x1="-3.81" y1="-1.27" x2="3.81" y2="-1.27" width="0.2032" layer="21"/>
-<pad name="A" x="-2.5" y="0" drill="1" diameter="1.8796" shape="square" rot="R270"/>
-<pad name="E" x="2.5" y="0" drill="1" diameter="1.8796" shape="square" rot="R270"/>
-<pad name="S" x="0" y="0" drill="1" diameter="1.8796" shape="square" rot="R270"/>
-<text x="-3.81" y="1.905" size="1.016" layer="25">&gt;NAME</text>
-<text x="0.635" y="1.905" size="1.016" layer="27">&gt;VALUE</text>
-</package>
-<package name="ALPS_POT_HORIZONTAL">
-<wire x1="-4.295" y1="1.05" x2="-4.295" y2="5.6" width="0.127" layer="21"/>
-<wire x1="-4.295" y1="5.6" x2="4.295" y2="5.6" width="0.127" layer="21"/>
-<wire x1="4.295" y1="5.6" x2="4.295" y2="1.05" width="0.127" layer="21"/>
-<wire x1="-4.3" y1="1" x2="4.3" y2="1" width="0.127" layer="21"/>
-<pad name="P$1" x="-2.5" y="3.3" drill="1" diameter="1.8796" shape="square" rot="R270"/>
-<pad name="P$2" x="0" y="3.3" drill="1" diameter="1.8796" shape="square" rot="R270"/>
-<pad name="P$3" x="2.5" y="3.3" drill="1" diameter="1.8796" shape="square" rot="R270"/>
-<pad name="P$4" x="-4.4" y="0" drill="2" shape="octagon" rot="R270"/>
-<pad name="P$5" x="4.4" y="0" drill="2" shape="octagon" rot="R270"/>
-</package>
-<package name="ALPS_POT_VERTICAL">
-<circle x="0" y="0" radius="2.54" width="0.2032" layer="21"/>
-<wire x1="4.295" y1="-5.46" x2="-4.295" y2="-5.46" width="0.127" layer="21"/>
-<wire x1="-4.295" y1="-5.46" x2="-4.295" y2="4.33" width="0.127" layer="21"/>
-<wire x1="-4.295" y1="4.33" x2="4.295" y2="4.33" width="0.127" layer="21"/>
-<wire x1="4.295" y1="4.33" x2="4.295" y2="-5.46" width="0.127" layer="21"/>
-<wire x1="-1.1" y1="0.625" x2="1.1" y2="0.625" width="0.2032" layer="21" curve="239.208901"/>
-<wire x1="-1.1" y1="0.625" x2="1.1" y2="0.625" width="0.2032" layer="21"/>
-<wire x1="-2.45" y1="0.625" x2="2.425" y2="0.625" width="0.2032" layer="21"/>
-<pad name="P$1" x="-2.5" y="6.7" drill="1" diameter="1.8796" shape="square" rot="R270"/>
-<pad name="P$2" x="0" y="6.7" drill="1" diameter="1.8796" shape="square" rot="R270"/>
-<pad name="P$3" x="2.5" y="6.7" drill="1" diameter="1.8796" shape="square" rot="R270"/>
-<pad name="P$4" x="-4.4" y="0" drill="2.2" diameter="3.175" shape="octagon" rot="R270"/>
-<pad name="P$5" x="4.4" y="0" drill="2.2" diameter="3.175" shape="octagon" rot="R270"/>
-</package>
-</packages>
-<symbols>
-<symbol name="POT_US-">
-<wire x1="0" y1="-5.08" x2="0" y2="-4.572" width="0.1524" layer="94"/>
-<wire x1="0" y1="-4.572" x2="-1.016" y2="-3.81" width="0.254" layer="94"/>
-<wire x1="-1.016" y1="-3.81" x2="1.27" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="1.27" y1="-2.54" x2="-1.016" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="-1.016" y1="-1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
-<wire x1="1.27" y1="0" x2="-1.016" y2="1.27" width="0.254" layer="94"/>
-<wire x1="-1.016" y1="1.27" x2="1.27" y2="2.54" width="0.254" layer="94"/>
-<wire x1="1.27" y1="2.54" x2="-1.016" y2="3.81" width="0.254" layer="94"/>
-<wire x1="-1.016" y1="3.81" x2="0" y2="4.572" width="0.254" layer="94"/>
-<wire x1="0" y1="4.572" x2="0" y2="5.08" width="0.1524" layer="94"/>
-<wire x1="1.27" y1="0" x2="2.54" y2="1.27" width="0.2032" layer="94"/>
-<wire x1="2.54" y1="-1.27" x2="1.27" y2="0" width="0.2032" layer="94"/>
-<wire x1="2.54" y1="1.27" x2="2.54" y2="-1.27" width="0.2032" layer="94"/>
-<wire x1="2.032" y1="-4.699" x2="2.032" y2="-2.159" width="0.1524" layer="94"/>
-<wire x1="2.032" y1="-2.159" x2="2.667" y2="-3.429" width="0.1524" layer="94"/>
-<wire x1="2.667" y1="-3.429" x2="1.397" y2="-3.429" width="0.1524" layer="94"/>
-<wire x1="1.397" y1="-3.429" x2="2.032" y2="-2.159" width="0.1524" layer="94"/>
-<pin name="A" x="0" y="-7.62" visible="off" length="short" direction="pas" rot="R90"/>
-<pin name="E" x="0" y="7.62" visible="off" length="short" direction="pas" rot="R270"/>
-<pin name="S" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
-<text x="-5.08" y="-2.54" size="1.778" layer="95" rot="R90">&gt;NAME</text>
-<text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="POT_US" prefix="R" uservalue="yes">
-<gates>
-<gate name="G$1" symbol="POT_US-" x="0" y="0"/>
-</gates>
-<devices>
-<device name="CABLED" package="CABLE_POT_6MM">
-<connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="E" pad="E"/>
-<connect gate="G$1" pin="S" pad="S"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="HORIZONTAL" package="ALPS_POT_HORIZONTAL">
-<connects>
-<connect gate="G$1" pin="A" pad="P$3"/>
-<connect gate="G$1" pin="E" pad="P$1"/>
-<connect gate="G$1" pin="S" pad="P$2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="VERTICAL" package="ALPS_POT_VERTICAL">
-<connects>
-<connect gate="G$1" pin="A" pad="P$3"/>
-<connect gate="G$1" pin="E" pad="P$1"/>
-<connect gate="G$1" pin="S" pad="P$2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
-<library name="thonkiconn">
-<packages>
-<package name="WQP-PJ301M-12_JACK">
-<wire x1="-4.5" y1="6" x2="-1.5" y2="6" width="0.127" layer="21"/>
-<wire x1="-1.5" y1="6" x2="1.5" y2="6" width="0.127" layer="21"/>
-<wire x1="1.5" y1="6" x2="4.5" y2="6" width="0.127" layer="21"/>
-<wire x1="-4.5" y1="6" x2="-4.5" y2="-4.5" width="0.127" layer="21"/>
-<wire x1="-4.5" y1="-4.5" x2="0.2" y2="-4.5" width="0.127" layer="21"/>
-<wire x1="0.2" y1="-4.5" x2="4.5" y2="-4.5" width="0.127" layer="21"/>
-<wire x1="4.5" y1="-4.5" x2="4.5" y2="6" width="0.127" layer="21"/>
-<circle x="0" y="0" radius="3.162275" width="0.127" layer="21"/>
-<wire x1="-1.5" y1="6" x2="-1.5" y2="4" width="0.127" layer="21"/>
-<wire x1="-1.5" y1="4" x2="1.5" y2="4" width="0.127" layer="21"/>
-<wire x1="1.5" y1="4" x2="1.5" y2="6" width="0.127" layer="21"/>
-<pad name="P$1" x="0" y="5" drill="1.1" thermals="no"/>
-<pad name="P$2" x="0" y="-3.5" drill="1.1"/>
-<pad name="P$3" x="0" y="-6.5" drill="1.1"/>
-<circle x="0" y="0" radius="2.690721875" width="0.127" layer="21"/>
-<wire x1="-0.2" y1="-4.6" x2="-0.2" y2="-6.7" width="0.127" layer="21"/>
-<wire x1="-0.2" y1="-6.7" x2="0.2" y2="-6.7" width="0.127" layer="21"/>
-<wire x1="0.2" y1="-6.7" x2="0.2" y2="-4.5" width="0.127" layer="21"/>
-<rectangle x1="-2.8" y1="-2.8" x2="2.8" y2="2.8" layer="41"/>
-<text x="-4.7498" y="-4.4704" size="1.27" layer="21" rot="R90">&gt;NAME</text>
-</package>
-</packages>
-<symbols>
-<symbol name="JACK">
-<wire x1="-2.54" y1="2.54" x2="0" y2="2.54" width="0.1524" layer="94"/>
-<wire x1="0" y1="2.54" x2="1.524" y2="1.016" width="0.1524" layer="94"/>
-<wire x1="1.524" y1="1.016" x2="2.286" y2="1.778" width="0.1524" layer="94"/>
-<wire x1="-2.54" y1="0" x2="-0.762" y2="0" width="0.1524" layer="94"/>
-<wire x1="-0.762" y1="0" x2="-0.762" y2="2.286" width="0.1524" layer="94"/>
-<wire x1="-0.762" y1="2.286" x2="-1.016" y2="1.524" width="0.254" layer="94"/>
-<wire x1="-1.016" y1="1.524" x2="-0.508" y2="1.524" width="0.254" layer="94"/>
-<wire x1="-0.508" y1="1.524" x2="-0.762" y2="2.286" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-2.54" x2="4.572" y2="-2.54" width="0.1524" layer="94"/>
-<text x="-2.54" y="4.064" size="1.778" layer="95">&gt;NAME</text>
-<text x="-2.54" y="-6.096" size="1.778" layer="96">&gt;VALUE</text>
-<rectangle x1="2.286" y1="-0.508" x2="7.874" y2="0.508" layer="94" rot="R90"/>
-<pin name="1" x="-5.08" y="-2.54" visible="pad" length="short" direction="pas"/>
-<pin name="2" x="-5.08" y="2.54" visible="pad" length="short" direction="pas"/>
-<pin name="3" x="-5.08" y="0" visible="pad" length="short" direction="pas"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="WQP-PJ301M-12_JACK">
-<gates>
-<gate name="G$1" symbol="JACK" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="WQP-PJ301M-12_JACK">
-<connects>
-<connect gate="G$1" pin="1" pad="P$3"/>
-<connect gate="G$1" pin="2" pad="P$1"/>
-<connect gate="G$1" pin="3" pad="P$2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -390,22 +220,6 @@ DIN A3, landscape with location and doc. field</description>
 </classes>
 <parts>
 <part name="FRAME1" library="frames" deviceset="A3L-LOC" device=""/>
-<part name="POT_A0" library="pot-alps" deviceset="POT_US" device="VERTICAL" value="10k"/>
-<part name="POT_A1" library="pot-alps" deviceset="POT_US" device="VERTICAL" value="10k"/>
-<part name="RESET" library="thonkiconn" deviceset="WQP-PJ301M-12_JACK" device=""/>
-<part name="CV_A1" library="thonkiconn" deviceset="WQP-PJ301M-12_JACK" device=""/>
-<part name="CV_A0" library="thonkiconn" deviceset="WQP-PJ301M-12_JACK" device=""/>
-<part name="CLOCK_IN" library="thonkiconn" deviceset="WQP-PJ301M-12_JACK" device=""/>
-<part name="POT_A2" library="pot-alps" deviceset="POT_US" device="VERTICAL" value="10k"/>
-<part name="POT_A3" library="pot-alps" deviceset="POT_US" device="VERTICAL" value="10k"/>
-<part name="CV_A3" library="thonkiconn" deviceset="WQP-PJ301M-12_JACK" device=""/>
-<part name="CV_A2" library="thonkiconn" deviceset="WQP-PJ301M-12_JACK" device=""/>
-<part name="DIO4_OUT" library="thonkiconn" deviceset="WQP-PJ301M-12_JACK" device=""/>
-<part name="DIO5_OUT" library="thonkiconn" deviceset="WQP-PJ301M-12_JACK" device=""/>
-<part name="DIO6_OUT" library="thonkiconn" deviceset="WQP-PJ301M-12_JACK" device=""/>
-<part name="DIO7_OUT" library="thonkiconn" deviceset="WQP-PJ301M-12_JACK" device=""/>
-<part name="AUDIO_OUT1" library="thonkiconn" deviceset="WQP-PJ301M-12_JACK" device=""/>
-<part name="AUDIO_OUT2" library="thonkiconn" deviceset="WQP-PJ301M-12_JACK" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -413,50 +227,16 @@ DIN A3, landscape with location and doc. field</description>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
-<instance part="POT_A0" gate="G$1" x="147.32" y="213.36"/>
-<instance part="POT_A1" gate="G$1" x="147.32" y="243.84"/>
-<instance part="RESET" gate="G$1" x="40.64" y="205.74" rot="MR0"/>
-<instance part="CV_A1" gate="G$1" x="129.54" y="236.22" rot="MR0"/>
-<instance part="CV_A0" gate="G$1" x="129.54" y="205.74" rot="MR0"/>
-<instance part="CLOCK_IN" gate="G$1" x="40.64" y="241.3" rot="MR0"/>
-<instance part="POT_A2" gate="G$1" x="236.22" y="213.36"/>
-<instance part="POT_A3" gate="G$1" x="236.22" y="238.76"/>
-<instance part="CV_A3" gate="G$1" x="215.9" y="231.14" rot="MR0"/>
-<instance part="CV_A2" gate="G$1" x="215.9" y="208.28" rot="MR0"/>
-<instance part="DIO4_OUT" gate="G$1" x="370.84" y="213.36"/>
-<instance part="DIO5_OUT" gate="G$1" x="370.84" y="187.96"/>
-<instance part="DIO6_OUT" gate="G$1" x="370.84" y="162.56"/>
-<instance part="DIO7_OUT" gate="G$1" x="370.84" y="137.16"/>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="N$14" class="0">
-<segment>
-<pinref part="RESET" gate="G$1" pin="3"/>
-<wire x1="48.26" y1="205.74" x2="45.72" y2="205.74" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$15" class="0">
-<segment>
-<pinref part="RESET" gate="G$1" pin="1"/>
-<wire x1="45.72" y1="203.2" x2="48.26" y2="203.2" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="CV_A3" gate="G$1" pin="1"/>
-<wire x1="220.98" y1="228.6" x2="223.52" y2="228.6" width="0.1524" layer="91"/>
-</segment>
-</net>
 </nets>
 </sheet>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="AUDIO_OUT1" gate="G$1" x="243.84" y="81.28"/>
-<instance part="AUDIO_OUT2" gate="G$1" x="243.84" y="20.32"/>
 </instances>
 <busses>
 </busses>

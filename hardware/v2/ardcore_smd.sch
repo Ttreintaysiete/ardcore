@@ -22808,6 +22808,9 @@ Source: http://focus.ti.com/lit/ds/slcs146e/slcs146e.pdf</description>
 <part name="GND25" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND31" library="SparkFun" deviceset="GND" device=""/>
 <part name="P+10" library="supply1" deviceset="+5V" device=""/>
+<part name="LED5" library="led" deviceset="LED" device="3MM"/>
+<part name="LED6" library="led" deviceset="LED" device="3MM"/>
+<part name="LED7" library="led" deviceset="LED" device="3MM"/>
 </parts>
 <sheets>
 <sheet>
@@ -22959,6 +22962,9 @@ CC BY-SA 2017 Ooteca</text>
 <instance part="RC3" gate="G$1" x="259.08" y="213.36"/>
 <instance part="D7" gate="G$1" x="269.24" y="205.74"/>
 <instance part="D8" gate="G$1" x="269.24" y="198.12" rot="R180"/>
+<instance part="LED5" gate="G$1" x="264.16" y="104.14" rot="R90"/>
+<instance part="LED6" gate="G$1" x="246.38" y="91.44" rot="R90"/>
+<instance part="LED7" gate="G$1" x="233.68" y="104.14" rot="R90"/>
 </instances>
 <busses>
 </busses>
