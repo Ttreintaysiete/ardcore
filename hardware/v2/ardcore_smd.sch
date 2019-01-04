@@ -22808,9 +22808,6 @@ Source: http://focus.ti.com/lit/ds/slcs146e/slcs146e.pdf</description>
 <part name="GND25" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND31" library="SparkFun" deviceset="GND" device=""/>
 <part name="P+10" library="supply1" deviceset="+5V" device=""/>
-<part name="LED5" library="led" deviceset="LED" device="3MM"/>
-<part name="LED6" library="led" deviceset="LED" device="3MM"/>
-<part name="LED7" library="led" deviceset="LED" device="3MM"/>
 </parts>
 <sheets>
 <sheet>
@@ -22962,9 +22959,6 @@ CC BY-SA 2017 Ooteca</text>
 <instance part="RC3" gate="G$1" x="259.08" y="213.36"/>
 <instance part="D7" gate="G$1" x="269.24" y="205.74"/>
 <instance part="D8" gate="G$1" x="269.24" y="198.12" rot="R180"/>
-<instance part="LED5" gate="G$1" x="264.16" y="104.14" rot="R90"/>
-<instance part="LED6" gate="G$1" x="246.38" y="91.44" rot="R90"/>
-<instance part="LED7" gate="G$1" x="233.68" y="104.14" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -23044,9 +23038,6 @@ CC BY-SA 2017 Ooteca</text>
 <pinref part="IC5" gate="P" pin="VCC"/>
 <wire x1="312.42" y1="172.72" x2="314.96" y2="172.72" width="0.1524" layer="91"/>
 <label x="317.5" y="172.72" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="312.42" y1="187.96" x2="314.96" y2="187.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC8" gate="P" pin="VCC"/>
@@ -23353,6 +23344,22 @@ CC BY-SA 2017 Ooteca</text>
 <pinref part="D8" gate="G$1" pin="A"/>
 <wire x1="271.78" y1="198.12" x2="279.4" y2="198.12" width="0.1524" layer="91"/>
 <label x="281.94" y="198.12" size="1.778" layer="95" rot="R180"/>
+</segment>
+<segment>
+<wire x1="314.96" y1="213.36" x2="309.88" y2="213.36" width="0.1524" layer="91"/>
+<label x="304.8" y="210.82" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="312.42" y1="187.96" x2="304.8" y2="187.96" width="0.1524" layer="91"/>
+<label x="302.26" y="185.42" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="312.42" y1="162.56" x2="304.8" y2="162.56" width="0.1524" layer="91"/>
+<label x="302.26" y="160.02" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="312.42" y1="137.16" x2="307.34" y2="137.16" width="0.1524" layer="91"/>
+<label x="302.26" y="134.62" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
@@ -24206,18 +24213,21 @@ CC BY-SA 2017 Ooteca</text>
 <segment>
 <wire x1="43.18" y1="58.42" x2="30.48" y2="58.42" width="0.1524" layer="91"/>
 <label x="30.48" y="58.42" size="1.778" layer="95" rot="R180"/>
+<pinref part="U2" gate="A" pin="DIN"/>
 </segment>
 </net>
 <net name="SCK" class="0">
 <segment>
 <wire x1="43.18" y1="53.34" x2="30.48" y2="53.34" width="0.1524" layer="91"/>
 <label x="30.48" y="53.34" size="1.778" layer="95" rot="R180"/>
+<pinref part="U2" gate="A" pin="SCLK"/>
 </segment>
 </net>
 <net name="SS" class="0">
 <segment>
 <wire x1="43.18" y1="55.88" x2="30.48" y2="55.88" width="0.1524" layer="91"/>
 <label x="30.48" y="55.88" size="1.778" layer="95" rot="R180"/>
+<pinref part="U2" gate="A" pin="~SYNC"/>
 </segment>
 </net>
 <net name="N$2" class="0">
